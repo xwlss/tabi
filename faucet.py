@@ -2,7 +2,8 @@ import requests
 import time
 from  faker  import  Faker
 
-with open('./bera0.txt', "r") as f:
+with open('./tabi.txt', "r") as f:
+    
     content = f.readlines()
 for i in content:
         headers = {
@@ -21,7 +22,8 @@ for i in content:
             'sec-ch-ua-platform': '"macOS"',
         }
         json_data = {
-            'address': i.split(',')[0],
+            #本处根据你的地址私钥文件格式进行修改
+            'address': i.strip(),
         }
         r=requests.get('https://api.ake.net/refresh/-all-country-CA/23amv023d0')
         print(r.text)
