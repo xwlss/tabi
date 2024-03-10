@@ -30,6 +30,7 @@ for i in content:
             #如果文件中以私钥，地址形式：
             #'address': i.split(',')[1].strip(),
         }
+    
         #更新代理 需要自行购买或者配置 目前市场上很多 大家按自己需要使用
         #以nstproxy示例 
         #在nstproxy网站上注册获取 nstproxy_Channel 和 nstproxy_Password
