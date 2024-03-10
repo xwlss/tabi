@@ -25,7 +25,16 @@ for i in content:
             #本处根据你的地址私钥文件格式进行修改
             'address': i.strip(),
         }
-        response = requests.post('https://faucet-api.testnet.tabichain.com/api/faucet', headers=headers, json=json_data,verify=False,proxies={'all':'http://150.xxx.xxx.xxx:xxx'})
+        #更新代理 需要自行购买或者配置 目前市场上很多 大家按自己需要使用
+        #以nstproxy示例 
+        #在nstproxy网站上注册获取 nstproxy_Channel 和 nstproxy_Password
+        #nstproxy_Channel='XXX'
+        #nstproxy_Password='XXX'
+        #nstproxies = f"http://{nstproxy_Channel}-residential-country_ANY-r_5m-s_BsqLCLkiVu:{nstproxy_Password}@gw-us.nstproxy.com:24125"
+        #proxies = {'all://': nstproxy}
+        proxies = {'all://': 'http://127.0.0.1:12345'}#以你的代理服务网址或ip和端口替换127.0.0.1:12345
+        
+        response = requests.post('https://faucet-api.testnet.tabichain.com/api/faucet', headers=headers, json=json_data,verify=False,proxies=proxies)
         print(response.text)
         if response.status_code!=200:
             time.sleep(50)
