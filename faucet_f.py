@@ -28,7 +28,7 @@ for i in content:
         r=requests.get('https://api.ake.net/refresh/-all-country-CA/23amv023d0')
         print(r.text)
         
-        response = requests.post('https://faucet-api.testnet.tabichain.com/api/faucet', headers=headers, json=json_data,verify=False,proxies={'all':'http://150.230.176.82:24014'})
+        response = requests.post('https://faucet-api.testnet.tabichain.com/api/faucet', headers=headers, json=json_data,verify=False,proxies={'all':'http://150.xxx.xxx.xxx:xxx'})
         print(response.text)
         if response.status_code!=200:
             time.sleep(50)
