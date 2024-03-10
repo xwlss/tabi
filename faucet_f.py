@@ -25,9 +25,6 @@ for i in content:
             #本处根据你的地址私钥文件格式进行修改
             'address': i.strip(),
         }
-        r=requests.get('https://api.ake.net/refresh/-all-country-CA/23amv023d0')
-        print(r.text)
-        
         response = requests.post('https://faucet-api.testnet.tabichain.com/api/faucet', headers=headers, json=json_data,verify=False,proxies={'all':'http://150.xxx.xxx.xxx:xxx'})
         print(response.text)
         if response.status_code!=200:
