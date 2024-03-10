@@ -6,6 +6,6 @@
 
 2.如果已有地址文件领水，请运行 python3 faucet_f.py，请自行配置27行提取地址格式。
 
-如果由程序生成地址私钥助记词，请请运行 python3 faucet_c.py，运行完成后相关地址、私钥和助记词都会保存在tabi-wallet.txt文件中，请妥善保存。
+如果由程序生成地址私钥助记词，请运行 python3 faucet_c.py，运行完成后相关地址、私钥和助记词都会保存在tabi-wallet.txt文件中，请妥善保存。
 
 3.如果显示Error：No module named 'XXX' ,请在cmd下运行 pip install XXX。
