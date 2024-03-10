@@ -23,7 +23,12 @@ for i in content:
         }
         json_data = {
             #本处根据你的地址私钥文件格式进行修改
+            #如果文件中仅有地址：
             'address': i.strip(),
+            #如果文件中以地址：私钥形式：
+            #'address': i.split(':')[0],
+            #如果文件中以私钥，地址形式：
+            #'address': i.split(',')[1].strip(),
         }
         #更新代理 需要自行购买或者配置 目前市场上很多 大家按自己需要使用
         #以nstproxy示例 
